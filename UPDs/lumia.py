@@ -1,3 +1,5 @@
+import pandas as pd
+
 class Lumia():
     
     def __init__(self, dados={},heat_rate=[],pre_heat=False):
@@ -23,7 +25,7 @@ class Lumia():
             for lin in lab:                   #iteração de valor em valor
                 try:                         #evita bugs e erros por conversão falha
                     lista.append(int(lin))      #converte str para int
-                except:
+                except TypeError:
                     lista.append(np.nan)      #caso vazio e erro adiciona NAN
             if i == 0:                        #a primeira coluna é temperatura
                 if pre_heat == False:          #Teste logico de preheat para soma de Temperatura inicial
@@ -64,7 +66,7 @@ class Lumia():
                 atol.append(cur)
                 temp.append(num+273)
                 index.append(num)
-        if pre_heat == True:
+        if pre_heat is True:
             temp = np.array(temp) + pre_heat_val
         else:
             pass 
