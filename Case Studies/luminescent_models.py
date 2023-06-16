@@ -10,3 +10,6 @@ def general_order(temperature:list, activation_energy,kinectic_order, iMax,Tmax)
 #Escape factor is calculated
 #Heating rate is given
 #The solution of the integrals discribed in time resulted on on a single value of temperature in the scale of time. Can the scale of time be 
+#Get glow fit curve for Origin Luiz Claudio uses
+#lcmb
+#model = Im*b^(b/(b-1))exp(En/k/x(x-Tm)/Tm)(1+(b-1)*2*k*Tm/En+(b-1)(1-2*k*x/En)(x^2/Tm^2*exp(En/k/x(x-Tm)/Tm)))^(-b/(b-1))
