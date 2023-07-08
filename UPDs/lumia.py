@@ -1,5 +1,5 @@
 import pandas as pd
-
+import numpy as np
 class Lumia():
     
     def __init__(self, dados={},heat_rate=[],pre_heat=False):
