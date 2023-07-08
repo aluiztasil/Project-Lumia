@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lumia Training</title>
+    <style>
+        /* Add your CSS here */
+        .center {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="/home" method="POST">
+        <img src="Curve_clasifier_client/static/image.png" class="center">
+        <p class="center">Curve ID: {{ curve_id }}</p>
+        <p>{{ statement }}</p>
+        <input type="hidden" name="curve_id" value="{{ curve_id }}">
+        <input type="submit" name="choice" value="True" style="background-color: green">
+        <input type="submit" name="choice" value="False" style="background-color: red">
+    </form>
+</body>
+</html>
