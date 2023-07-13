@@ -41,7 +41,7 @@ def home():
     sub_item_data = np.array(data['curve_data']).T
 
     # Create data frame
-    columns = ['Curve{}'.format(i) for i in range(len(sub_item_data[0]))]
+    columns = data['curve_metadata']['SAMPLE_ID']
     df = pd.DataFrame(sub_item_data, columns = columns)
     #df = pd.read_json('data/input.json',) #add headers as the curve ids stored
     temperature = [i for i in range(25,375)]
