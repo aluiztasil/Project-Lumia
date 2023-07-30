@@ -89,10 +89,6 @@ def home():
         plt.savefig('Curve_clasifier_client/static/image.png', format='png') # --  up to this part itworks, the page doesnt render
 
 
- 
-
-
-
 
     if df.empty:
         return render_template('end.html')
