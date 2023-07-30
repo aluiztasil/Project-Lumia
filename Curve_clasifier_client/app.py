@@ -53,10 +53,10 @@ def home():
     if extension == '.json':
         with open(file_path) as f:
             data = json.load(f)
-    statement = 'Presta?' # what to measure, what statement is should be evaluated?
-  
+    statement = 'Presta?' # what to measure, what statement is should be evaluated? #where should this information be caught from.
+    attribute_name = ''
     # Sample curves given the session size
-    session_size = min(50, len(data))  # Ensure session size is not larger than total number of curves
+    session_size = min(50, int(session['session_size']))  # Ensure session size is not larger than total number of curves
     sampled_curve_names = random.sample(list(data.keys()), session_size)
 
     # Collect curve data for sampled curves
@@ -66,27 +66,33 @@ def home():
     df = pd.DataFrame(sub_item_data, columns=sampled_curve_names)
 
     # Iterate over sampled curves and process their metadata
-    for curve_name in sampled_curve_names: # instead of iterating here address the item via (user_response varivable)
-        # Extract metadata
-        metadata = data[curve_name]['curve_metadata']
-        
-        # Extract values
-        high_value = metadata['HIGH']
-        low_value = metadata['LOW']
-        npoints_value = metadata['NPOINTS']
-        rate_value = metadata['RATE']
-        an_temp_value = metadata['AN_TEMP']
-        an_time_value = metadata['AN_TIME']
-        
-        # Generate curve points
-        temperature = generate_curve_points(curve_name, data)
-        plt.figure(figsize=(10, 6))
-        plt.plot(temperature, df[curve_name])
-        plt.xlabel('Temperature')
-        plt.ylabel('Luminescent')
-        plt.title('Temperature vs Luminescent')
-        plt.grid(True)
-        plt.savefig('Curve_clasifier_client/static/image.png', format='png') # --  up to this part itworks, the page doesnt render
+    #for curve_name in sampled_curve_names: 
+    # # instead of iterating here address the item via (user_response varivable)
+    curve_name = sampled_curve_names[len(user_responses)]
+    # Extract metadata
+    metadata = data[curve_name]['curve_metadata']
+    
+    # Extract values
+    high_value = metadata['HIGH']
+    low_value = metadata['LOW']
+    npoints_value = metadata['NPOINTS']
+    rate_value = metadata['RATE']
+    an_temp_value = metadata['AN_TEMP']
+    an_time_value = metadata['AN_TIME']
+    
+    # Generate curve points
+    temperature = generate_curve_points(curve_name, data)
+    plt.figure(figsize=(10, 6))
+    plt.plot(temperature, df[curve_name])
+    plt.xlabel('Temperature')
+    plt.ylabel('Luminescent')
+    plt.title('Temperature vs Luminescent')
+    plt.grid(True)
+    plt.savefig('Curve_clasifier_client/static/image.png', format='png') # --  up to this part itworks, the page doesnt render
+
+
+ 
+
 
 
 
@@ -103,7 +109,7 @@ def home():
             "curve_id": curve_name
         })
         #fix output file generation
-        if len(user_responses) % 5 == 0:  # save file only in the end of the session (?)
+        if len(user_responses) % int(session['session_size']):  # save file only in the end of the session (?)
             try:
                 # try to read the existing file
                 df_out = pd.read_csv("Curve_clasifier_client/data/output.csv")
