@@ -1,0 +1,52 @@
+ 
+#   # -- From here on the data should be extracted on a different way (?)
+#     # a random sampler should be placed here-- it should sample curves in the database given the session size(?)
+#     # the random sampler should sample the session size number of items out of the available dataset. (?)
+#     #the session size -- max size is 50. should be the same size of the final value of len(user_responses) (?)
+#     #sub_item_data = np.array(data['curve_data']).T # does't work anymore need to be replaced with new json structure. (?)
+
+#     # Create data frame
+#     columns = data['curve_metadata']['SAMPLE_ID']
+#     df = pd.DataFrame(sub_item_data, columns = columns)
+#     #metadata processing for json
+#     if user_responses:
+#         high_value =      data['curve_metadata']['HIGH'][len(user_responses)] #needs to be corrected to data['curve']['curve_metadata'][(..)]]      (?)
+#         low_value =      data['curve_metadata']['LOW'][len(user_responses)]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         npoints_value =   data['curve_metadata']['NPOINTS'][len(user_responses)]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         rate_value = data['curve_metadata']['RATE'][len(user_responses)]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         an_temp_value =   data['curve_metadata']['AN_TEMP'][len(user_responses)]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         an_time_value =   data['curve_metadata']['AN_TIME'][len(user_responses)]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#     else:     
+#         high_value = data['curve_metadata']['HIGH'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         low_value = data['curve_metadata']['LOW'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         npoints_value = data['curve_metadata']['NPOINTS'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         rate_value = data['curve_metadata']['RATE'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         an_temp_value = data['curve_metadata']['AN_TEMP'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#         an_time_value = data['curve_metadata']['AN_TIME'][0]  #needs to be corrected to data['curve']['curve_metadata'][(..)]] (?)
+#     #df = pd.read_json('data/input.json',) #add headers as the curve ids stored
+#     temperature = generate_curve_points(test_curve_name, data) #need to find a way to pull the cuve name here (?)
+
+
+---
+after end
+--
+   # Select a curve to measure
+
+        #curve_id =  df.columns.iloc[0] #select the firs unmeasured curve
+    # if len(user_responses) == 0:
+    #     curve_id =  list(df.columns)[0]
+    # if len(user_responses) > 0:
+    #     curve_id =  list(df.columns)[len(user_responses)]  
+
+    # #it
+    # # Plot chart
+    # plt.figure(figsize=(10, 6))
+    # plt.plot(temperature, df[curve_id])
+    # plt.xlabel('Temperature')
+    # plt.ylabel('Luminescent')
+    # plt.title('Temperature vs Luminescent')
+    # plt.grid(True)
+    # plt.savefig('Curve_clasifier_client/static/image.png', format='png') # --  up to this part itworks, the page doesnt render
+
+    #curve_id = 'your_curve_id'  # Replace with code to get curve id
+

@@ -13,8 +13,32 @@
 <body>
     <form action="/home" method="POST">
         <img src="Curve_clasifier_client/static/image.png" class="center">
+        
         <p class="center">Curve ID: {{ curve_id }}</p>
+        <table class="table table-bordered mt-3" border="1">
+            <thead>
+                <tr>
+                    <th>HIGH</th>
+                    <th>LOW</th>
+                    <th>NPOINTS</th>
+                    <th>RATE</th>
+                    <th>AN_TEMP</th>
+                    <th>AN_TIME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="high_value"></td>
+                    <td id="low_value"></td>
+                    <td id="npoints_value"></td>
+                    <td id="rate_value"></td>
+                    <td id="an_temp_value"></td>
+                    <td id="an_time_value"></td>
+                </tr>
+            </tbody>
+        </table>
         <p>{{ statement }}</p>
+
         <input type="hidden" name="curve_id" value="{{ curve_id }}">
         <input type="submit" name="choice" value="True" style="background-color: green">
         <input type="submit" name="choice" value="False" style="background-color: red">
