@@ -11,6 +11,8 @@
     </style>
 </head>
 <body>
+    <h1>Lumia Dojo</h1>
+    <p class="center">Countdouwn: {{ countdown }}</p>
     <form action="/home" method="POST">
         <img src="Curve_clasifier_client/static/image.png" class="center">
         
@@ -18,22 +20,22 @@
         <table class="table table-bordered mt-3" border="1">
             <thead>
                 <tr>
-                    <th>HIGH</th>
-                    <th>LOW</th>
+                    <th>HIGH TEMPERATURE</th>
+                    <th>LOW LEMPERATURE</th>
                     <th>NPOINTS</th>
-                    <th>RATE</th>
-                    <th>AN_TEMP</th>
-                    <th>AN_TIME</th>
+                    <th>HEATING RATE</th>
+                    <th>PRE HEAT TEMP</th>
+                    <th>PRE HEAT TIME</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td id="high_value"></td>
-                    <td id="low_value"></td>
-                    <td id="npoints_value"></td>
-                    <td id="rate_value"></td>
-                    <td id="an_temp_value"></td>
-                    <td id="an_time_value"></td>
+                    <td id="high_value">{{ high_value }}</td>
+                    <td id="low_value">{{ low_value }}</td>
+                    <td id="npoints_value">{{ npoints_value }}</td>
+                    <td id="rate_value">{{ rate_value }}</td>
+                    <td id="an_temp_value">{{ an_temp_value }}</td>
+                    <td id="an_time_value">{{ an_time_value }}</td>
                 </tr>
             </tbody>
         </table>
