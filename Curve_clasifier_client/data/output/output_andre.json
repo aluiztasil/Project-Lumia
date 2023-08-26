@@ -1,0 +1,182 @@
+{
+    "TL-072229816": {
+        "curve_attributes": {
+            "SINGLE01": {
+                "measured_value": "True",
+                "inferred_value": null
+            },
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072224263": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-101858003": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072224286": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-121812634": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-091857780": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-091843745": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-042343333": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-121852364": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072239148": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-051930089": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072229779": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072224296": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072224269": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072229773": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072229802": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072224293": {
+        "curve_attributes": {
+            "PROCES15": {
+                "measured_value": "True",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072229838": {
+        "curve_attributes": {
+            "MULTIP02": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-051959399": {
+        "curve_attributes": {
+            "MULTIP02": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072239104": {
+        "curve_attributes": {
+            "MULTIP02": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-121827192": {
+        "curve_attributes": {
+            "MULTIP02": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    },
+    "TL-072229858": {
+        "curve_attributes": {
+            "MULTIP02": {
+                "measured_value": "False",
+                "inferred_value": null
+            }
+        }
+    }
+}   
